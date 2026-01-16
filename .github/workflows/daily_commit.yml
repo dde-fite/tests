@@ -1,4 +1,4 @@
-name: Nora's daily contributions
+name: Days until GTA 6
 
 on:
   schedule:
@@ -23,7 +23,7 @@ jobs:
           target="2026-11-19"
           today="$(date +%Y-%m-%d)"
           days_left=$(( ( $(date -d "$target" +%s) - $(date -d "$today" +%s) ) / 86400 ))
-          echo "Today is $today and there are $days_left days until GTA 6." >> README.md
+          echo -e "\nToday is $today and there are $days_left days until GTA 6." >> README.md
       - name: Commit and push changes
         uses: devops-infra/action-commit-push@master
         with:
