@@ -20,7 +20,7 @@ jobs:
           target="2026-11-19"
           today="$(date +%Y-%m-%d)"
           days_left=$(( ( $(date -d "$target" +%s) - $(date -d "$today" +%s) ) / 86400 ))
-          echo -e "Today is $today and there are $days_left days until GTA 6." > README.md
+          echo -e "<div align='center'><img alt='Days until gta6' src='media/days_until_gta6.jpg'><h1>Today is $today and there are $days_left days until GTA 6.</h1><div/>" > README.md
       - name: Commit and push changes
         uses: devops-infra/action-commit-push@master
         with:
