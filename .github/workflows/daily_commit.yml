@@ -18,14 +18,6 @@ jobs:
         run: |
           echo "Making daily contribution"
           echo "$(date)" >> README.md
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v7
-        with:
-          author_name: "GitHub Actions"
-          author_email: "actions@github.com"
-          message: "Daily contribution"
-          # Set the files to commit - replace this with your own file paths
-          add: "README.md"
       - name: Commit and push changes
         uses: devops-infra/action-commit-push@master
         with:
